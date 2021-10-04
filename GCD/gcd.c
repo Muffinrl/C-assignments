@@ -9,7 +9,7 @@
 int gcd(int p, int q);
 
 int main(void) {
-    printf("%d", gcd(6, 15));
+    printf("%d", gcd(15, 6));
     return 0;
 }
 
