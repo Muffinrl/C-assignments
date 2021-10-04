@@ -18,6 +18,10 @@ int main (void) {
     return 0;
 }
 
+/* 
+    calculateSum() takes 3 inputs a,n,r and calculates the sum of the geometric sequence: a(r^n).
+    It does so by storing the intermediate values of the for-loop in the auxiliary variable "sum".
+*/
 double calculateSum(double a, int n, double r) {
     double sum;
     for (int i = 0; i <= n; i++){
