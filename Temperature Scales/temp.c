@@ -22,7 +22,7 @@ int main(void) {
 
     printf("Please provide a temperature to be converted in Celsius:\n");
     scanf("%lf", &in_temp);
-    printf("%s%12s%12s\n%.2f%12.2f%12.2f\n", "C", "K", "F", in_temp, convertTempK(in_temp), convertTempF(in_temp)); // No idea how to format this neatly. In its current state it looks most neat when the input is between 3 and 8 digits.
+    printf("%s\t%s\t%s\n%.2f\t%.2f\t%.2f\n", "C", "K", "F", in_temp, convertTempK(in_temp), convertTempF(in_temp)); // Formatting breaks with anything input > 9999. But the assignment specifies tabs.
     return 0;
 }
 
