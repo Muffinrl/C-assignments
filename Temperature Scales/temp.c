@@ -1,13 +1,14 @@
-/* 
-    This program corresponds to assignment 1.3: Temperature scales.
-    "temp" is assumed to be a shortened version of "temperature". Not to be confused with "tmp" and "temporary".
-*/
+/*
+ * Student: J. van der Geize
+ * Number: 5462290
+ * Assignment: 1.3
+ */
 
 #include <stdio.h>
 
 /* 
     Defining constant values for conversion:
-    DIFF means the value is added to the input to convert the temperature.
+    DIFF (difference) means the value is added to the input to convert the temperature.
     FACTOR means the input is multiplied by the value to convert the temperature.
 */
 #define TEMP_DIFF_KELVIN 273.15
@@ -18,7 +19,7 @@ double convertTempK(double temp);
 double convertTempF(double temp);
 
 int main(void) {
-    double in_temp; // "Input Temperature"
+    double in_temp; /* "Input Temperature" */
 
     printf("Please provide a temperature to be converted in Celsius:\n");
     scanf("%lf", &in_temp);
@@ -26,12 +27,12 @@ int main(void) {
     return 0;
 }
 
-// convertTempK() converts a given temperature in Celsius to Kelvin.
+/* convertTempK() converts a given temperature in Celsius to Kelvin. */
 double convertTempK (double temp) {
     return temp + TEMP_DIFF_KELVIN;
 }
 
-// convertTempF() converts a given temperature in Celsius to Fahrenheit.
+/* convertTempF() converts a given temperature in Celsius to Fahrenheit. */
 double convertTempF (double temp) {
     return TEMP_FACTOR_FAHRENHEIT * temp + TEMP_DIFF_FAHRENHEIT;
 }

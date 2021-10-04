@@ -1,6 +1,8 @@
 /*
-    This program corresponds to assignment 3.3: Abstraction: the program primes.
-*/
+ * Student: J. van der Geize
+ * Number: 5462290
+ * Assignment: 3.3
+ */
 
 #include <stdio.h>
 #include <math.h>
@@ -8,6 +10,26 @@
 int isPrime(int a);
 
 int main(void) {
+    int lowerBound, upperBound;
+    int i;
+
+    printf("Provide a range (lower_bound upper_bound) separated by a space: ");
+    scanf("%d%d", &lowerBound, &upperBound);
+    printf("Primes in range %d - %d:\n", lowerBound, upperBound);
+
+    /* Minor error check, not really necessary for the purposes of the program, but could possibly prevent a huge loop around. */
+    if(lowerBound > upperBound) {
+        printf("Please enter the lower bound first!");
+        return 0;
+    }
+    
+    /* Loop through within the range, printing if isPrime() returns true. */
+    for(i = lowerBound; i <= upperBound; i++) {
+        if(isPrime(i)) {
+            printf("%d\n", i);
+        }
+    }
+
     return 0;
 }
 
@@ -20,9 +42,11 @@ int main(void) {
 */
 int isPrime(int a) {
     int c = 0;
-    for (int i = 1; i <= sqrt(a); i++) {
+    int i;
+    for (i = 1; i <= sqrt(a); i++) {
         if (!fmod(a, i))
             c++;
     }
     return c == 1 && a != 1;
 }
+

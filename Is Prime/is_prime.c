@@ -1,6 +1,8 @@
 /*
-    This program corresponds to assignment 2.12: The program is_prime.
-*/
+ * Student: J. van der Geize
+ * Number: 5462290
+ * Assignment: 2.12
+ */
 
 #include <stdio.h>
 #include <math.h>
@@ -32,7 +34,8 @@ int main(void) {
 */
 int isPrime(int a) {
     int c = 0;
-    for (int i = 1; i <= sqrt(a); i++) {
+    int i;
+    for (i = 1; i <= sqrt(a); i++) {
         if (!fmod(a, i))
             c++;
     }

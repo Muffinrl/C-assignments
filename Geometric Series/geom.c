@@ -1,6 +1,8 @@
 /*
-    This program corresponds to assignment 1.4: Geometric series.
-*/
+ * Student: J. van der Geize
+ * Number: 5462290
+ * Assignment: 1.4
+ */
 
 #include <stdio.h>
 #include <math.h>
@@ -8,8 +10,7 @@
 double calculateSum(double a, int n, double r);
 
 int main (void) {
-    double a;
-    double r;
+    double a, r;
     int n;
 
     printf("Please provide three parameters (a,n,r) separated by a space:\n");
@@ -24,7 +25,8 @@ int main (void) {
 */
 double calculateSum(double a, int n, double r) {
     double sum;
-    for (int i = 0; i <= n; i++){
+    int i;
+    for (i = 0; i <= n; i++){
         sum += a * pow(r, i);
     }
     return sum;
