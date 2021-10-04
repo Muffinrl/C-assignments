@@ -44,7 +44,7 @@ int isPrime(int a) {
     int c = 0;
     int i;
     for (i = 1; i <= sqrt(a); i++) {
-        if (!fmod(a, i))
+        if (!(a % i))
             c++;
     }
     return c == 1 && a != 1;
