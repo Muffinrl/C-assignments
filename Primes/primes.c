@@ -13,8 +13,8 @@ int main(void) {
     int lowerBound, upperBound;
     int i;
 
-    printf("Provide a range (lower_bound upper_bound) separated by a space: ");
-    scanf("%d%d", &lowerBound, &upperBound);
+    printf("Provide a range (lower_bound upper_bound): \n");
+    scanf("%d\n%d", &lowerBound, &upperBound);
     printf("Primes in range %d - %d:\n", lowerBound, upperBound);
 
     /* Minor error check, not really necessary for the purposes of the program, but could possibly prevent a huge loop around. */
