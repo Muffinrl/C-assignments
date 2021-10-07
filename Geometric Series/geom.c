@@ -8,14 +8,15 @@
 #include <math.h>
 
 double calculateSum(double a, int n, double r);
+double sum;
 
 int main (void) {
     double a, r;
     int n;
 
-    printf("Please provide three parameters (a,n,r) separated by a space:\n");
+    /*printf("Please provide three parameters (a,n,r) separated by a space:\n"); */
     scanf("%lf%d%lf", &a, &n, &r);
-    printf("The geometric sum:\n%.2f", calculateSum(a,n,r));
+    printf("%.2f\n", calculateSum(a,n,r));
     return 0;
 }
 
@@ -24,7 +25,6 @@ int main (void) {
     It does so by storing the intermediate values of the for-loop in the auxiliary variable "sum".
 */
 double calculateSum(double a, int n, double r) {
-    double sum;
     int i;
     for (i = 0; i <= n; i++){
         sum += a * pow(r, i);

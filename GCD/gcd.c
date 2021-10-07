@@ -11,9 +11,8 @@ int gcd(int p, int q);
 int main(void) {
     int a, b; /* Inputs */
 
-    printf("Enter two numbers:\n");
     scanf("%d\n%d", &a, &b);
-    printf("The GCD of %d and %d\n%d", a, b, gcd(a,b));
+    printf("%d\n", gcd(a,b));
     return 0;
 }
 

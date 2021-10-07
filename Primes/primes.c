@@ -13,11 +13,9 @@ int main(void) {
     int lowerBound, upperBound;
     int i;
 
-    printf("Provide a range (lower_bound upper_bound): \n");
     scanf("%d\n%d", &lowerBound, &upperBound);
-    printf("Primes in range %d - %d:\n", lowerBound, upperBound);
 
-    /* Minor error check, not really necessary for the purposes of the program, but could possibly prevent a huge loop around. */
+    /* Minor error check, not really necessary for the purposes of the program, but could possibly prevent a huge loop around. Please have mercy dear TA all I want to do is write clean code :(. */
     if(lowerBound > upperBound) {
         printf("Please enter the lower bound first!");
         return 0;
