@@ -12,14 +12,14 @@ int isPrime(int a);
 int main(void) {
     int input;
 
-    printf("Enter a natural number: ");
+    /*printf("Enter a natural number: ");*/
     scanf("%d", &input);
 
     if(isPrime(input)) {
-        printf("%d is prime!", input);
+        printf("%d is a prime number\n", input);
     }
     else {
-        printf("%d is not prime!", input);
+        printf("%d is not a prime number\n", input);
     }
 
     return 0;

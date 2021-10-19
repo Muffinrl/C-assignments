@@ -21,9 +21,9 @@ double convertTempF(double temp);
 int main(void) {
     double in_temp; /* "Input Temperature" */
 
-    printf("Please provide a temperature to be converted in Celsius:\n");
+/*    printf("Please provide a temperature to be converted in Celsius:\n"); */
     scanf("%lf", &in_temp);
-    printf("%s\t%s\t%s\n%.2f\t%.2f\t%.2f\n", "C", "K", "F", in_temp, convertTempK(in_temp), convertTempF(in_temp)); // Formatting breaks with anything input > 9999. But the assignment specifies tabs.
+    printf("%s\t%s\t%s\n%.2f\t%.2f\t%.2f\n", "C", "K", "F", in_temp, convertTempK(in_temp), convertTempF(in_temp)); /* Formatting breaks with anything input > 9999. But the assignment specifies tabs. */
     return 0;
 }
 
