@@ -8,8 +8,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-double getMagnitude(double* v);
-void swap(double **a, double **b), sortVectorsByMagnitude(double** w);
+double getMagnitude(double* v, int dim);
+void swap(double **a, double **b), sortVectorsByMagnitude(double** w, int dim, int num);
 
 int main (void)
 {
@@ -31,7 +31,7 @@ int main (void)
 	/* FIXME
 	 * Sort the vectors and print them.
 	 */
-	sortVectorsByMagnitude(w);
+	sortVectorsByMagnitude(w, dim, num);
 	for (i = 0; i < num; i++) {
 		for (j = 0; j < dim; j++) {
 			printf("%e ", w[i][j]);
@@ -42,23 +42,22 @@ int main (void)
 	return 0;
 }
 
-double getMagnitude(double *v) {
-	double sum;
+double getMagnitude(double *v, int dim) {
+	double sum = 0;
 	int i;
-	int length = sizeof(v) / sizeof(v[0]); /* Determine the length of v */
 
-	for(i = 0; i < length; i++) {
-		sum += v[i];
+	for(i = 0; i < dim; i++) {
+		sum += v[i]*v[i];
 	}
-	printf("%.2f", sum);
+
 	return sqrt(sum);
 }
 
-void sortVectorsByMagnitude(double** w) {
-	int i, j, length = sizeof(w) / sizeof(w[0]);
-	for (i = 0; i < length - 1; i++) {
-		for (j = length - 1; j > i; j--) {
-			if (getMagnitude(&*w[j-1]) > getMagnitude(&*w[j]))
+void sortVectorsByMagnitude(double** w, int dim, int num) {
+	int i, j;
+	for (i = 0; i < num; i++) {
+		for (j = num - 1; j > i; j--) {
+			if (getMagnitude(w[j-1], dim) > getMagnitude(w[j], dim))
 				swap(&w[j-1], &w[j]);
 		}
 	}
