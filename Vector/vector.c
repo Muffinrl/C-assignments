@@ -28,7 +28,7 @@ int main (void)
 		}
 	} 
 
-	/* FIXME
+	/*
 	 * Sort the vectors and print them.
 	 */
 	sortVectorsByMagnitude(w, dim, num);
@@ -42,6 +42,12 @@ int main (void)
 	return 0;
 }
 
+/*
+	getMagnitude() takes a single vector *v and it's dimension dim.
+	getMagnitude() calculates the magnitude of vector *v:
+	magnitude is the sum of the squares of the elements: sum(v[i]^2).
+*/
+
 double getMagnitude(double *v, int dim) {
 	double sum = 0;
 	int i;
@@ -53,6 +59,10 @@ double getMagnitude(double *v, int dim) {
 	return sqrt(sum);
 }
 
+/* 
+	sortVectorsByMagnitude() takes the vectors **w and array paramaters dim, num 
+	and executes a bubble-sort algorithm. 
+*/
 void sortVectorsByMagnitude(double** w, int dim, int num) {
 	int i, j;
 	for (i = 0; i < num; i++) {
@@ -62,6 +72,11 @@ void sortVectorsByMagnitude(double** w, int dim, int num) {
 		}
 	}
 }
+
+/*
+	swap() takes two arguments: **a, **b.
+	swap() assigns the initial value of **a to **b and the inital value of **b to **a.
+*/
 
 void swap (double **a, double **b) {
 	double *tmp;
